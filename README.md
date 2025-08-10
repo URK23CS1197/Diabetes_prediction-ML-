@@ -126,6 +126,7 @@ Contributions are welcome! Please fork the repository and submit pull requests f
 
 
 Author
-Your Name
-GitHub: https://github.com/<your-username>
+NIRANSON
+
+GitHub: https://github.com/URK23CS1197/Diabetes_prediction-ML-.git
 
