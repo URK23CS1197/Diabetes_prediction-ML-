@@ -1,31 +1,34 @@
 🩺 Diabetes Prediction Web App
 A Flask-based web application for predicting diabetes using a machine learning model. The project is containerized with Docker, automatically tested and deployed using GitHub Actions, and hosted on Render.
 
+
 Features
-Machine Learning Model: Logistic Regression trained on diabetes dataset.
+        Machine Learning Model: Logistic Regression trained on diabetes dataset.
 
-Flask API & Web UI: Interactive web form for user health data and instant predictions.
+        Flask API & Web UI: Interactive web form for user health data and instant predictions.
 
-Containerized: Reliable and cross-platform deployments with Docker.
+        Containerized: Reliable and cross-platform deployments with Docker.
 
-CI/CD: Automated build, test, and deployment pipeline via GitHub Actions.
+        CI/CD: Automated build, test, and deployment pipeline via GitHub Actions.
 
-Cloud Hosting: Live public access via Render.
+        Cloud Hosting: Live public access via Render.
+
 
 Technology Stack
-Python 3.10, Flask
+      Python 3.10, Flask
 
-scikit-learn, joblib
+      scikit-learn, joblib
 
-Gunicorn
+      Gunicorn
 
-Docker
+      Docker
 
-GitHub Actions (CI/CD)
+      GitHub Actions (CI/CD)
 
-Render (Cloud Hosting)
+      Render (Cloud Hosting)
 
-HTML/CSS (User Interface)
+      HTML/CSS (User Interface)
+
 
 Included Files & Directories
 dia_ml.py — Model training script
