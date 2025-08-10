@@ -2,7 +2,7 @@ name: CI/CD for Diabetes Prediction Web App (with Render Deployment)
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]   # make sure this matches your default branch
 
 jobs:
   train_model:
@@ -24,15 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Train model and save PKL
-        run: python dia_ml.py  
-      - name: Commit & push updated PKL
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add diabetes_model.pkl
-          git commit -m "Auto-update diabetes_model.pkl"
-          git push
-        continue-on-error: true
+        run: python dia_ml.py   # This creates diabetes_model.pkl in the workspace
 
   docker_test:
     name: Build & Test Docker Image
