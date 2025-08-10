@@ -16,92 +16,35 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       background-color: #fff;
     }
-
-    h2 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 30px;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: 600;
-      color: #34495e;
-    }
-
+    h2 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+    form label { display: block; margin-bottom: 10px; font-weight: 600; color: #34495e; }
     input[type="number"] {
-      width: 100%;
-      padding: 8px 10px;
-      font-size: 15px;
-      border: 2px solid #dce3e8;
-      border-radius: 6px;
+      width: 100%; padding: 8px 10px; font-size: 15px;
+      border: 2px solid #dce3e8; border-radius: 6px;
       transition: border-color 0.3s ease;
     }
-
     input[type="number"]:focus {
-      outline: none;
-      border-color: #3498db;
+      outline: none; border-color: #3498db;
       box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
     }
-
-    .button-group {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-
+    .button-group { display: flex; justify-content: space-between; margin-top: 20px; }
     button {
-      width: 48%;
-      padding: 12px;
-      font-size: 17px;
-      font-weight: 700;
-      color: #fff;
-      background-color: #3498db;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      width: 48%; padding: 12px; font-size: 17px; font-weight: 700;
+      color: #fff; background-color: #3498db; border: none; border-radius: 6px;
+      cursor: pointer; transition: background-color 0.3s ease;
     }
-
-    button:hover {
-      background-color: #2980b9;
-    }
-
-    button.reset-btn {
-      background-color: #95a5a6;
-    }
-
-    button.reset-btn:hover {
-      background-color: #7f8c8d;
-    }
-
+    button:hover { background-color: #2980b9; }
+    button.reset-btn { background-color: #95a5a6; }
+    button.reset-btn:hover { background-color: #7f8c8d; }
     #result {
-      margin-top: 25px;
-      font-size: 18px;
-      font-weight: 700;
-      text-align: center;
-      padding: 15px;
-      border-radius: 6px;
-      background-color: #ecf0f1;
-      color: #2c3e50;
-      min-height: 60px;
-      white-space: pre-line; /* allow line breaks */
+      margin-top: 25px; font-size: 18px; font-weight: 700; text-align: center;
+      padding: 15px; border-radius: 6px; background-color: #ecf0f1; color: #2c3e50;
+      min-height: 60px; white-space: pre-line;
     }
-
-    /* Responsive for smaller screens */
     @media (max-width: 480px) {
-      body {
-        margin: 20px 15px;
-        padding: 15px 20px;
-      }
-      .button-group {
-        flex-direction: column;
-      }
-      button {
-        width: 100%;
-        margin-bottom: 10px;
-      }
+      body { margin: 20px 15px; padding: 15px 20px; }
+      .button-group { flex-direction: column; }
+      button { width: 100%; margin-bottom: 10px; }
     }
   </style>
 </head>
@@ -164,14 +107,14 @@
       resultDiv.style.color = "#2c3e50";
 
       try {
-        const response = await fetch("http://127.0.0.1:5000/predict", {
+        // ✅ Changed to relative URL for deployment compatibility
+        const response = await fetch("/predict", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         });
 
         const result = await response.json();
-
         if (response.ok) {
           let feedback = "";
           if (result.prediction === "Diabetic") {
@@ -183,7 +126,6 @@
             resultDiv.style.backgroundColor = "#d4edda";
             resultDiv.style.color = "#155724";
           }
-
           resultDiv.textContent = `Prediction: ${result.prediction}\n\n${feedback}`;
         } else {
           resultDiv.textContent = `Error: ${result.error || "Unknown error"}`;
@@ -204,6 +146,5 @@
       resultDiv.style.color = "#2c3e50";
     });
   </script>
-  
 </body>
 </html>
