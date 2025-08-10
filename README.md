@@ -1,6 +1,7 @@
-🩺 Diabetes Prediction Web App
-A Flask-based web application for predicting diabetes using a machine learning model. The project is containerized with Docker, automatically tested and deployed using GitHub Actions, and hosted on Render.
+🩺 Diabetes Prediction Web App:
 
+
+The Diabetes Prediction Web Application is a comprehensive, end-to-end machine learning solution that predicts diabetes risk based on user-input medical data. Built with a logistic regression model served via a Flask web API, fully containerized with Docker, and deployed through an automated CI/CD pipeline on Render, this project exemplifies modern best practices in delivering reliable, scalable, and secure AI-powered healthcare applications. It offers a responsive user interface, seamless cloud deployment, and robust automation—making it an ideal template for production-ready predictive analytics solutions.
 
 Features
 
