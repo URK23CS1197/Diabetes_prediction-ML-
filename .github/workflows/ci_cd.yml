@@ -2,7 +2,7 @@ name: CI/CD for Diabetes Prediction Web App (with Render Deployment)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   train_model:
