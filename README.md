@@ -3,6 +3,7 @@ A Flask-based web application for predicting diabetes using a machine learning m
 
 
 Features
+
         Machine Learning Model: Logistic Regression trained on diabetes dataset.
 
         Flask API & Web UI: Interactive web form for user health data and instant predictions.
@@ -15,6 +16,7 @@ Features
 
 
 Technology Stack
+
       Python 3.10, Flask
 
       scikit-learn, joblib
@@ -31,6 +33,7 @@ Technology Stack
 
 
 Included Files & Directories
+
                 dia_ml.py — Model training script
 
                 diabetes_model.pkl — Trained model file
@@ -46,6 +49,7 @@ Included Files & Directories
                 .github/workflows/ci_cd.yml — GitHub Actions automation workflow
 
 Local Setup
+
                 Clone the repository:
 
                 bash
@@ -72,11 +76,13 @@ Run the app locally:
 
                         
 Open in browser:
+
                 http://localhost:5000
 
 
 
 Docker Usage
+
                 Build the Docker image:
 
                 bash
@@ -88,11 +94,13 @@ Docker Usage
 
                         
 Visit in browser:
+
                 http://localhost:5000
 
 
 
 CI/CD & Deployment
+
                 Pipeline is configured in .github/workflows/ci_cd.yml:
 
                 Trains the model
@@ -121,6 +129,7 @@ Render Setup:
                 
 
 Usage Notes
+
                 The frontend JavaScript fetches predictions from /predict relative URL.
 
                 Ensure diabetes_model.pkl is present before deployment.
@@ -132,6 +141,7 @@ Usage Notes
 
 
 Troubleshooting
+
                 Prediction not working?
 
                         Fetch URL in JavaScript must be /predict
@@ -150,10 +160,12 @@ Troubleshooting
 
 
 Contribution
+
                 Contributions welcome! Fork the repo, create a pull request, and ensure all automated checks pass.
 
 
 Author
+
                 NIRANSON
                 
 GitHub: https://github.com/URK23CS1197/Diabetes_prediction-ML
