@@ -37,102 +37,123 @@ Included Files & Directories
 
                 app.py — Main Flask backend application
 
-/templates/index.html — Web UI for user data entry and prediction
+                /templates/index.html — Web UI for user data entry and prediction
 
-requirements.txt — Python dependencies
+                requirements.txt — Python dependencies
 
-Dockerfile — Docker build instructions
+                Dockerfile — Docker build instructions
 
-.github/workflows/ci_cd.yml — GitHub Actions automation workflow
+                .github/workflows/ci_cd.yml — GitHub Actions automation workflow
 
 Local Setup
-Clone the repository:
+                Clone the repository:
 
-bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+                bash
+                        git clone https://github.com/<your-username>/<repo-name>.git
+                        cd <repo-name>
+
+
 Install dependencies:
 
-bash
-pip install -r requirements.txt
+                bash
+                        pip install -r requirements.txt
+
+
 Train the model:
 
-bash
-python dia_ml.py
+                bash
+                        python dia_ml.py
+
+
 Run the app locally:
 
-bash
-flask run --host=0.0.0.0 --port=5000
+                bash
+                        flask run --host=0.0.0.0 --port=5000
+
+                        
 Open in browser:
-http://localhost:5000
+                http://localhost:5000
+
+
 
 Docker Usage
-Build the Docker image:
+                Build the Docker image:
 
-bash
-docker build -t diabetes-flask-app .
-Run the container:
+                bash
+                        docker build -t diabetes-flask-app .
+                        Run the container:
 
-bash
-docker run -p 5000:5000 diabetes-flask-app
+                bash
+                        docker run -p 5000:5000 diabetes-flask-app
+
+                        
 Visit in browser:
-http://localhost:5000
+                http://localhost:5000
+
+
 
 CI/CD & Deployment
-Pipeline is configured in .github/workflows/ci_cd.yml:
+                Pipeline is configured in .github/workflows/ci_cd.yml:
 
-Trains the model
+                Trains the model
 
-Builds & tests Docker image (health check using curl)
+                Builds & tests Docker image (health check using curl)
 
-Deploys to Render upon success
+                Deploys to Render upon success
 
-GitHub Actions secrets required:
+ 
+ GitHub Actions secrets required:
 
-RENDER_SERVICE_ID
+                RENDER_SERVICE_ID
 
-RENDER_API_KEY
+                RENDER_API_KEY
+
+
 
 Render Setup:
 
-Create a Web Service in Render dashboard
+                Create a Web Service in Render dashboard
 
-Connect GitHub repo and branch
+                Connect GitHub repo and branch
 
-Dockerfile and port 5000 are auto-detected
+                Dockerfile and port 5000 are auto-detected
+
+                
 
 Usage Notes
-The frontend JavaScript fetches predictions from /predict relative URL.
+                The frontend JavaScript fetches predictions from /predict relative URL.
 
-Ensure diabetes_model.pkl is present before deployment.
+                Ensure diabetes_model.pkl is present before deployment.
 
-Access logs via Render dashboard or docker logs diabetes-flask-app locally.
+                Access logs via Render dashboard or docker logs diabetes-flask-app locally.
 
-For best results, add a favicon.ico to /static folder.
+                For best results, add a favicon.ico to /static folder.
+
+
 
 Troubleshooting
-Prediction not working?
+                Prediction not working?
 
-Fetch URL in JavaScript must be /predict
+                        Fetch URL in JavaScript must be /predict
 
-Backend must load diabetes_model.pkl
+                        Backend must load diabetes_model.pkl
 
-Review logs for errors
+                        Review logs for errors
+                
+                Deployment issues?
 
-Deployment issues?
+                        Confirm Docker CMD and port
 
-Confirm Docker CMD and port
+                        Ensure secrets and service ID/API key are set
 
-Ensure secrets and service ID/API key are set
+                Use Render logs for debugging
 
-Use Render logs for debugging
 
 Contribution
-Contributions welcome! Fork the repo, create a pull request, and ensure all automated checks pass.
+                Contributions welcome! Fork the repo, create a pull request, and ensure all automated checks pass.
 
-License
-MIT License
 
 Author
-Your Name
-GitHub: https://github.com/<your-username>
+                NIRANSON
+                
+GitHub: https://github.com/URK23CS1197/Diabetes_prediction-ML
