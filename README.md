@@ -31,11 +31,11 @@ Technology Stack
 
 
 Included Files & Directories
-dia_ml.py — Model training script
+                dia_ml.py — Model training script
 
-diabetes_model.pkl — Trained model file
+                diabetes_model.pkl — Trained model file
 
-app.py — Main Flask backend application
+                app.py — Main Flask backend application
 
 /templates/index.html — Web UI for user data entry and prediction
 
