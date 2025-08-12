@@ -170,3 +170,5 @@ Author
                 NIRANSON
                 
 GitHub: https://github.com/URK23CS1197/Diabetes_prediction-ML
+
+WebApp: https://diabetes-prediction-ml-f7vd.onrender.com/
